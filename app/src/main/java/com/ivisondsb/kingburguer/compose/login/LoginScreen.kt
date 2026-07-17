@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -43,6 +44,24 @@ fun LoginScreen(modifier: Modifier = Modifier) {
             modifier = Modifier.padding(horizontal = 20.dp)
         ) {
 
+        }
+
+        KingTextField(
+            value = "",
+            label = R.string.password,
+            placeholder = R.string.hint_password,
+            keyboardType = KeyboardType.Password,
+            imeAction = ImeAction.Done,
+            modifier = Modifier.padding(horizontal = 20.dp)
+        ) {
+
+        }
+
+        OutlinedButton(
+            enabled = true,
+            onClick = {}
+        ) {
+            Text(stringResource(R.string.send))
         }
     }
 }
